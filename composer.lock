@@ -4,8 +4,8 @@
         {
             "package": "bazo/nette-ratchet-sessionprovider",
             "version": "dev-master",
-            "source-reference": "5ab4116bfc0737a15e514251bf2cd12fd61bdcaa",
-            "commit-date": "1341246420"
+            "source-reference": "f4063e13a56e9ecbbea9e0f1d60b169f10f071c7",
+            "commit-date": "1341246530"
         },
         {
             "package": "bazo/nette-symfonystorageadapter",
@@ -16,8 +16,8 @@
         {
             "package": "cboden/Ratchet",
             "version": "dev-master",
-            "source-reference": "13e56b9db89722a59ddc225cf51cfe0761c0577e",
-            "commit-date": "1340305724"
+            "source-reference": "3c617d96a29a88e81907b4c0f59c2ee6c97d12a8",
+            "commit-date": "1342155315"
         },
         {
             "package": "evenement/evenement",
@@ -26,38 +26,86 @@
             "commit-date": "1338390068"
         },
         {
+            "package": "guzzle/common",
+            "version": "v2.8.2"
+        },
+        {
             "package": "guzzle/guzzle",
             "version": "v2.5.0"
         },
         {
+            "package": "guzzle/http",
+            "version": "v2.8.2"
+        },
+        {
+            "package": "guzzle/parser",
+            "version": "v2.8.2"
+        },
+        {
             "package": "nette/nette",
             "version": "dev-master",
-            "source-reference": "a6b1f7fb42de27e41de24ab8c616693ff34f636e",
-            "commit-date": "1338327463"
+            "alias-pretty-version": "2.1.x-dev",
+            "alias-version": "2.1.9999999.9999999-dev"
         },
         {
-            "package": "react/event-loop",
+            "package": "nette/nette",
             "version": "dev-master",
-            "source-reference": "0927a2129394f10cc8534994271c6073ca9e350c",
-            "commit-date": "1337810634"
+            "source-reference": "3358e6ffc5069825801e3f49c603c36d0854677a",
+            "commit-date": "1343699498"
         },
         {
-            "package": "react/socket",
+            "package": "pimple/pimple",
             "version": "dev-master",
-            "source-reference": "e6f56a2d9ed1ad51d931ae3d3fee4a5803585bc8",
-            "commit-date": "1340206359"
+            "alias-pretty-version": "1.0.x-dev",
+            "alias-version": "1.0.9999999.9999999-dev"
+        },
+        {
+            "package": "pimple/pimple",
+            "version": "dev-master",
+            "source-reference": "db836b8cfadc0f39dacafa2bf311a1ab603600bb",
+            "commit-date": "1343051648"
+        },
+        {
+            "package": "react/react",
+            "version": "dev-master",
+            "source-reference": "2a43233661bd148c3eaa9214a89558669d202828",
+            "commit-date": "1342531429"
+        },
+        {
+            "package": "silex/silex",
+            "version": "dev-master",
+            "alias-pretty-version": "1.0.x-dev",
+            "alias-version": "1.0.9999999.9999999-dev"
+        },
+        {
+            "package": "silex/silex",
+            "version": "dev-master",
+            "source-reference": "6d7cf048c704c0c58276b01eccfacab4dd11d013",
+            "commit-date": "1344453846"
         },
         {
             "package": "symfony/console",
             "version": "dev-master",
-            "source-reference": "808bf42b4b74c12e6c6a6a9750688035f1c49f9c",
-            "commit-date": "1340543161"
+            "alias-pretty-version": "2.1.x-dev",
+            "alias-version": "2.1.9999999.9999999-dev"
+        },
+        {
+            "package": "symfony/console",
+            "version": "dev-master",
+            "source-reference": "3b66f1056f5ac37146d3b755964e8a43a205f2f5",
+            "commit-date": "1344349441"
         },
         {
             "package": "symfony/event-dispatcher",
             "version": "dev-master",
-            "source-reference": "v2.1.0-BETA1",
-            "commit-date": "1338018513"
+            "alias-pretty-version": "2.1.x-dev",
+            "alias-version": "2.1.9999999.9999999-dev"
+        },
+        {
+            "package": "symfony/event-dispatcher",
+            "version": "dev-master",
+            "source-reference": "v2.1.0-BETA4",
+            "commit-date": "1342739894"
         },
         {
             "package": "symfony/http-foundation",
@@ -68,21 +116,39 @@
         {
             "package": "symfony/http-foundation",
             "version": "dev-master",
+            "source-reference": "9a509ac3bb52076f5a765a85e9552042b40ce287",
+            "commit-date": "1344594770"
+        },
+        {
+            "package": "symfony/http-kernel",
+            "version": "dev-master",
             "alias-pretty-version": "2.1.x-dev",
             "alias-version": "2.1.9999999.9999999-dev"
         },
         {
-            "package": "symfony/http-foundation",
+            "package": "symfony/http-kernel",
             "version": "dev-master",
-            "source-reference": "211cba98f1f068f500b8f9f95b7b0036f458739d",
-            "commit-date": "1341177900"
+            "source-reference": "0d0ee371ab0425f3399dba9e25d7ad98ca5c0d62",
+            "commit-date": "1344074675"
+        },
+        {
+            "package": "symfony/routing",
+            "version": "dev-master",
+            "alias-pretty-version": "2.1.x-dev",
+            "alias-version": "2.1.9999999.9999999-dev"
+        },
+        {
+            "package": "symfony/routing",
+            "version": "dev-master",
+            "source-reference": "v2.1.0-RC1",
+            "commit-date": "1343744077"
         }
     ],
     "packages-dev": null,
     "aliases": [
 
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "stability-flags": {
         "cboden/ratchet": 20
     }
