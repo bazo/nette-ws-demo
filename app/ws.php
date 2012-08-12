@@ -14,7 +14,6 @@ define('LIBS_DIR', APP_DIR . '/../libs');
 
 // Load Nette Framework
 define('VENDOR_DIR', APP_DIR.'/../vendor');
-require_once VENDOR_DIR . '/nette/nette/Nette/loader.php';
 require VENDOR_DIR.'/autoload.php';
 
 // Configure application
