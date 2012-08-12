@@ -1,0 +1,88 @@
+#
+# SECURITY WARNING: it is CRITICAL that this file & directory are NOT accessible directly via a web browser!
+#
+# If you don't protect this directory from direct web access, anybody will be able to see your passwords.
+# http://nette.org/security-warning
+#
+common:
+	parameters:
+		database:
+			driver: mysql
+			host: localhost
+			dbname: websockets
+			user: root
+			password: root
+
+		mongo:
+			options:
+				database: websockets
+				collection: sessions
+
+		pdo:
+			options:
+				db_table: sessions
+
+	php:
+		date.timezone: Europe/Prague
+		# session.save_path: "%tempDir%/sessions"
+		# zlib.output_compression: yes
+
+
+	nette:
+		session:
+			expiration: '+ 14 days'
+			autoStart: smart
+
+
+	services:
+
+		pdo:
+			class: \PDO('%database.driver%:host=%database.host%;dbname=%database.dbname%', %database.user%, %database.password%)
+
+		mongo:
+			class: \Mongo('mongodb://localhost/websockets')
+
+		symfonyStorageHandler:
+			#class: \Symfony\Component\HttpFoundation\Session\Storage\Handler\MongoDbSessionHandler(@mongo, %mongo.options%)
+			class: \Symfony\Component\HttpFoundation\Session\Storage\Handler\PdoSessionHandler(@pdo, %pdo.options%)
+
+		sessionStorage:
+			class: \Bazo\SymfonySessionStorageAdapter(@symfonyStorageHandler)
+
+		session:
+			setup:
+				- setStorage(@sessionStorage)
+
+		authenticator:
+			class: \Authenticator
+
+	factories:
+
+ws < common:
+	#nette.httpRequestFactory:
+		#class: \WsRequestFactory
+		#internal: TRUE
+	factories:
+		requestFactory:
+			class: \WsRequestFactory
+			setup:
+					- setEncoding(UTF-8)
+			internal: TRUE
+
+	services:
+
+		application:
+			class: \Nette\Application\WsApplication
+
+		nette.httpRequestFactory:
+			class: \WsRequestFactory
+			#internal: true
+		httpRequest:
+			class: Nette\Http\Request
+			factory: @requestFactory::createHttpRequest
+
+production < common:
+
+development < common:
+
+

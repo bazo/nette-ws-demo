@@ -1,0 +1,89 @@
+{
+    "hash": "bdcc85f0f9e075e9dfafd1e2e35101a8",
+    "packages": [
+        {
+            "package": "bazo/nette-ratchet-sessionprovider",
+            "version": "dev-master",
+            "source-reference": "5ab4116bfc0737a15e514251bf2cd12fd61bdcaa",
+            "commit-date": "1341246420"
+        },
+        {
+            "package": "bazo/nette-symfonystorageadapter",
+            "version": "dev-master",
+            "source-reference": "4e862e2bffe13d62e1b22518f85ce89836c3e377",
+            "commit-date": "1341131375"
+        },
+        {
+            "package": "cboden/Ratchet",
+            "version": "dev-master",
+            "source-reference": "13e56b9db89722a59ddc225cf51cfe0761c0577e",
+            "commit-date": "1340305724"
+        },
+        {
+            "package": "evenement/evenement",
+            "version": "1.0.x-dev",
+            "source-reference": "v1.0.0",
+            "commit-date": "1338390068"
+        },
+        {
+            "package": "guzzle/guzzle",
+            "version": "v2.5.0"
+        },
+        {
+            "package": "nette/nette",
+            "version": "dev-master",
+            "source-reference": "a6b1f7fb42de27e41de24ab8c616693ff34f636e",
+            "commit-date": "1338327463"
+        },
+        {
+            "package": "react/event-loop",
+            "version": "dev-master",
+            "source-reference": "0927a2129394f10cc8534994271c6073ca9e350c",
+            "commit-date": "1337810634"
+        },
+        {
+            "package": "react/socket",
+            "version": "dev-master",
+            "source-reference": "e6f56a2d9ed1ad51d931ae3d3fee4a5803585bc8",
+            "commit-date": "1340206359"
+        },
+        {
+            "package": "symfony/console",
+            "version": "dev-master",
+            "source-reference": "808bf42b4b74c12e6c6a6a9750688035f1c49f9c",
+            "commit-date": "1340543161"
+        },
+        {
+            "package": "symfony/event-dispatcher",
+            "version": "dev-master",
+            "source-reference": "v2.1.0-BETA1",
+            "commit-date": "1338018513"
+        },
+        {
+            "package": "symfony/http-foundation",
+            "version": "dev-master",
+            "alias-pretty-version": "2.1.x-dev",
+            "alias-version": "2.1.9999999.9999999-dev"
+        },
+        {
+            "package": "symfony/http-foundation",
+            "version": "dev-master",
+            "alias-pretty-version": "2.1.x-dev",
+            "alias-version": "2.1.9999999.9999999-dev"
+        },
+        {
+            "package": "symfony/http-foundation",
+            "version": "dev-master",
+            "source-reference": "211cba98f1f068f500b8f9f95b7b0036f458739d",
+            "commit-date": "1341177900"
+        }
+    ],
+    "packages-dev": null,
+    "aliases": [
+
+    ],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "cboden/ratchet": 20
+    }
+}

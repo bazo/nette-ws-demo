@@ -1,0 +1,157 @@
+{**
+ * My Application layout template.
+ *
+ * @copyright  Copyright (c) 2010 John Doe
+ * @package    MyApplication
+ *
+ * @param string   $basePath web base path
+ * @param string   $robots   tell robots how to index the content of a page (optional)
+ * @param array    $flashes  flash messages
+ *}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+	<meta name="description" content="Nette Framework web application skeleton">
+	<meta name="robots" content="{$robots}" n:ifset="$robots">
+
+	<title>Nette Application Skeleton</title>
+
+	<link rel="stylesheet" media="screen,projection,tv" href="{$basePath}/css/screen.css" type="text/css">
+	<link rel="stylesheet" media="print" href="{$basePath}/css/print.css" type="text/css">
+	<link rel="shortcut icon" href="{$basePath}/favicon.ico" type="image/x-icon">
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+	<script type="text/javascript" src="{$basePath}/js/netteForms.js"></script>
+	
+	<script src="https://raw.github.com/bazo/ratchet-js-client/master/ratchet-client.js"></script>
+		<script>
+			var client = new client();
+			client.onOpen = function(data)
+			{
+				console.log(data);
+			}
+			
+			client.onPipi = function(data)
+			{
+				console.log(data);
+			}
+			
+			client.onMessage = function(data)
+			{
+				console.log(data);
+				data = JSON.parse(data);
+				if(data.snippets)
+				{
+					for(id in data.snippets)
+					{
+						var snippet = $('#'+id);
+						console.log(snippet);
+						snippet.html(data.snippets[id]);
+					}
+				}
+			}
+			client.connect('ws://nette.ws:8000');
+			
+			$(document).ready(function(){
+				$('.ws').on('click', function(e){
+					client.send(this.href);
+					e.preventDefault();
+				})
+				
+				$("a.ajax").live("click", function (event) {
+					event.preventDefault();
+					$.post(this.href);
+				});
+				
+			})
+
+		// Later, at your leisure:
+		//conn.send('Hello World!');
+		</script>
+		
+	{*
+	<script src="http://autobahn.ws/public/autobahn.min.js"></script>
+	<script>
+	var sess;
+ 
+	window.onload = function() {
+	sess = new ab.Session("ws://localhost:8000", function() {
+
+		sess.subscribe("http://example.com/event#event1", onEvent1);
+	});
+};
+ 
+function onEvent1(topic, event) {
+   alert("got event: " + event);
+}
+	</script>
+	*}
+		{*
+	<script src="http://autobahn.ws/public/autobahn.min.js"></script>
+	<script>
+		// WAMP session object
+var sess;
+ 
+// WAMP server
+var wsuri = "ws://nette.ws:8000";
+ 
+window.onload = function() {
+ 
+   // establish session when window has loaded
+   connect();
+};
+ 
+function connect() {
+ 
+   // establish session to WAMP server
+   sess = new ab.Session(wsuri,
+ 
+      // fired when session has been opened
+      function() {
+         console.log("Connected!");
+ 
+         onConnect();
+      },
+ 
+      // fired when session has been closed
+      function(reason) {
+         switch (reason) {
+            case ab.CONNECTION_CLOSED:
+               console.log("Connection was closed properly - done.");
+               break;
+            case ab.CONNECTION_UNREACHABLE:
+               console.log("Connection could not be established.");
+               break;
+            case ab.CONNECTION_UNSUPPORTED:
+               console.log("Browser does not support WebSocket.");
+               break;
+            case ab.CONNECTION_LOST:
+               console.log("Connection lost - reconnecting ...");
+ 
+               // automatically reconnect after 1s
+               window.setTimeout(connect, 1000);
+               break;
+         }
+      }
+   );
+};
+ 
+function onConnect() {
+   // do your awesome stuff HERE ..
+};
+</script>
+*}
+	{block head}{/block}
+</head>
+
+<body>
+	<script> document.body.className+=' js' </script>
+
+	<div n:foreach="$flashes as $flash" class="flash {$flash->type}">{$flash->message}</div>
+
+	{include #content}
+</body>
+</html>

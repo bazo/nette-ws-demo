@@ -1,0 +1,9 @@
+{
+    "require": {
+		"symfony/console" : "*",
+		"nette/nette": "*",
+		"cboden/Ratchet": "dev-master",
+		"bazo/nette-symfonystorageadapter": "*",
+		"bazo/nette-ratchet-sessionprovider": "*"
+    }
+}
